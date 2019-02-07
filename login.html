@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/Users/Lenovo/Desktop/New%20folder%20(2)/login.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>LOGIN</title>
+	<style>
+	body{
+    //background: radial-gradient(red, black);
+   }
+   .button1{
+     color:white;
+     background:radial-gradient(black, white);
+     border:none;
+     padding:12px 24px;
+     margin-left:70px;
+     margin-top:10px;
+     cursor:pointer;
+     border-radius:10px;
+
+   }
+   	.log{
+
+        opacity: 1.5;
+	text-align:right;
+        margin-left:150px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:40px;
+	color:#444;
+	}
+
+	.frm{
+
+    background: radial-gradient(white, white);
+    height:420px;
+    width:550px;
+    margin:auto;
+    border-radius:80px;
+    box-shadow:5px 5px 5px black;
+    margin-top:5%;
+  	}
+	.abc{
+	border-radius:30px;
+	height:40px;
+	width:250px
+
+	}
+	.inp{
+	font-size:20px;
+  font-weight:"Times New Roman", Times, serif;
+	}
+
+	.acc1{
+	float:right;
+	}
+	.acc{
+	float:right;
+	}
+	.forgot_pass{
+	float:right;
+
+	}
+
+	.csf{
+            font-family:Courier New;
+            text-decoration:none;
+            font-weight: bold;
+            color:black;
+            border-radius: 5px;
+
+
+	}
+
+
+
+</style>
+  </head>
+<body>
+    <div class="frm">
+      <form name="myform" action="file:///C:/Users/Lenovo/Desktop/New%20folder%20(2)/login.html#" method="get" onsubmit="return myvalidation()">
+            :
+                <table align="center">
+                <tbody><tr><th class="log">Sign In</th></tr>
+                <tr><td class="inp">USERNAME</td><td><input class="abc" type="text" name="user" placeholder="eg.bhrigu@gmail.com" required=""></td></tr>
+                <tr><td class="inp">PASSWORD</td>
+                <td><input class="abc" id="myInput" type="password" name="password" required="" placeholder="*********"></td></tr>
+                <tr><td>
+                  <input type="radio" name="log-type" value="student" checked="">STUDENT</td></tr>
+                  <tr><td><input type="radio" name="log-type" value="facul">FACULTY<br></td></tr>
+                  <tr><td><input type="radio" name="log-type" value="admin">ADMIN<br></td></tr>
+                <tr><td><button type="button" name="button" class="button1" onclick="myvalidation()">SIGN IN</button></td></tr>
+              	</tbody></table>
+              	</form>
+                <script>
+                    function myvalidation(){
+                    var value1=document.forms["myform"]["user"].value;
+                    var value2=document.forms["myform"]["password"].value;
+                    var value3=document.forms["myform"]["log-type"].value;
+                    if(value1 == ""){
+                    alert("USERNAME Field cannot be empty");
+                    flag= false;
+                  }
+                  if(value2 ==   ""){
+                  alert("PASSWORD Field cannot be empty");
+                  flag=false;
+                }
+              if(value3!="student" && value3!="facul"){
+                  alert("invalid value");
+                  flag=false;
+                }
+                return flag;
+
+              }
+            </script>
+            <div class="forgot_pass">
+              <a href="file:///C:/Users/Lenovo/Desktop/New%20folder%20(2)/login.html" class="csf" onclick="forgot_pass()">FORGOT PASSWORD</a>
+        </div>
+        <br><br>
+
+          <div class="acc">
+      <a href="file:///C:/Users/Lenovo/Desktop/New%20folder%20(2)/SIGNUP.html" class="csf">CREATE NEW ACCOUNT</a>
+
+	</div>
+            </div>
+ 
+ 
+</body></html>
